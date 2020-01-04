@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Create! History
+{% endblock %}
+{% block main %}
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script>
+    $("body").on("submit", "form", function() {
+        $(this).submit(function() {
+            return false;
+        });
+        return true;
+    });
+</script>
+<style>
+    #bgpic {
+        background-image: url("/static/historypic.jpg");
+        background-size: cover;
+        background-origin: content-box;
+    }
+</style>
+<br>
+<div class="container questionstyle">
+    <img src="/static/history.png" style="width: 275px; height: 200px">
+</div><br>
+<form action="/createhistory" method="post">
+    <div id="bgpic" class="form-group questionbody">
+    <div id="trans"><br><br>
+        Question:<br>
+        <textarea rows="6" cols="50" name="question" maxlength="300"></textarea><br><br><br><br>
+        (Correct) Answer:<br>
+        <textarea rows="2" cols="50" name="correct" maxlength="100"></textarea><br>
+        (Wrong) Answer:<br>
+        <textarea rows="2" cols="50" name="wrong1" maxlength="100"></textarea><br>
+        (Wrong) Answer:<br>
+        <textarea rows="2" cols="50" name="wrong2" maxlength="100"></textarea><br>
+        (Wrong) Answer:<br>
+        <textarea rows="2" cols="50" name="wrong3" maxlength="100"></textarea><br><br>
+        <button class="btn btn-primary" type="submit">Submit</button><br><br>
+    </div>
+    </div>
+</form>
+<br><br><br>
+{% endblock %}

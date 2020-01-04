@@ -1,0 +1,140 @@
+cs50
+Flask
+Flask-Session
+requests
+
+(temp. storage; may forget to delete..)
+............CREATE..............
+
+
+{% extends "layout.html" %}
+
+{% block title %}
+    Create
+{% endblock %}
+
+{% block main %}
+
+<div class="container questionstyle">
+    <h1>Which category?</h1>
+</div>
+<div class="card-columns">
+    <div class="card cardstyle cardcolor">
+        <div class="card-body">
+            <div class="card-body cardcolor">
+                <a href="/createsports" class="btn btn-danger" style="color:black"><h4>Sports</h4></a>
+            </div>
+        </div>
+        <img class="card-img-bottom" src="http://www.auburn-reporter.com/wp-content/uploads/2019/09/18409935_web1_T-sports-for-all-2.jpg">
+    </div>
+    <div class="card cardstyle cardcolor">
+        <div class="card-body">
+            <div class="card-body cardcolor">
+                <a href="/createhistory" class="btn btn-warning" style="color:black"><h4>History</h4></a>
+            </div>
+        </div>
+        <img class="card-img-bottom" src="https://www.anratechnologies.com/home/wp-content/uploads/2016/11/history.jpg">
+    </div>
+    <div class="card cardstyle cardcolor">
+        <div class="card-body">
+            <div class="card-body cardcolor">
+                <a href="/createscience" class="btn btn-success" style="color:black"><h4>Science</h4></a>
+            </div>
+        </div>
+        <img class="card-img-bottom" src="https://www.timeshighereducation.com/sites/default/files/styles/the_breaking_news_image_style/public/physics_blackboard.jpg?itok=uuOXMAQa">
+    </div>
+    <div class="card cardstyle cardcolor">
+        <div class="card-body">
+            <div class="card-body cardcolor">
+                <a href="/createpopculture" class="btn btn-info" style="color:black"><h4>Pop Culture</h4></a>
+            </div>
+        </div>
+        <img class="card-img-bottom" src="https://brocku.ca/social-sciences/cpcf/wp-content/uploads/sites/150/CPCF-Video-Carousel.jpg?x30279">
+    </div>
+    <div class="card cardstyle cardcolor">
+        <div class="card-body">
+            <div class="card-body cardcolor">
+                <a href="/createmoviestv" class="btn btn-primary" style="color:black"><h4>Movies/TV</h4></a>
+            </div>
+        </div>
+        <img class="card-img-bottom" src="https://lajoyalink.com/wp-content/uploads/2018/03/Movie.jpg">
+    </div>
+    <div class="card cardstyle cardcolor">
+        <div class="card-body">
+            <div class="card-body cardcolor">
+                <a href="/createother" class="btn btn-secondary" style="color:black"><h4>Other</h4></a>
+            </div>
+        </div>
+        <img class="card-img-bottom" src="https://miro.medium.com/max/2100/1*Km98PgzRp9yRYfVZeSzwzQ.png">
+    </div>
+
+{% endblock %}
+
+
+
+
+..........PLAY...........
+
+{% extends "layout.html" %}
+
+{% block title %}
+    Play
+{% endblock %}
+
+{% block main %}
+
+<div class="container questionstyle">
+    <h1>Which category?<br>Or click </h1><a href="/playall">here</a><h1> to play all!</h1>
+</div>
+<div class="card-columns">
+    <div class="card cardstyle cardcolor">
+        <div class="card-body">
+            <div class="card-body cardcolor">
+                <a href="/playsports" class="btn btn-danger" style="color:black"><h4>Sports</h4></a>
+            </div>
+        </div>
+        <img class="card-img-bottom" src="http://www.auburn-reporter.com/wp-content/uploads/2019/09/18409935_web1_T-sports-for-all-2.jpg">
+    </div>
+    <div class="card cardstyle cardcolor">
+        <div class="card-body">
+            <div class="card-body cardcolor">
+                <a href="/playhistory" class="btn btn-warning" style="color:black"><h4>History</h4></a>
+            </div>
+        </div>
+        <img class="card-img-bottom" src="https://www.anratechnologies.com/home/wp-content/uploads/2016/11/history.jpg">
+    </div>
+    <div class="card cardstyle cardcolor">
+        <div class="card-body">
+            <div class="card-body cardcolor">
+                <a href="/playscience" class="btn btn-success" style="color:black"><h4>Science</h4></a>
+            </div>
+        </div>
+        <img class="card-img-bottom" src="https://www.timeshighereducation.com/sites/default/files/styles/the_breaking_news_image_style/public/physics_blackboard.jpg?itok=uuOXMAQa">
+    </div>
+    <div class="card cardstyle cardcolor">
+        <div class="card-body">
+            <div class="card-body cardcolor">
+                <a href="/playpopculture" class="btn btn-info" style="color:black"><h4>Pop Culture</h4></a>
+            </div>
+        </div>
+        <img class="card-img-bottom" src="https://brocku.ca/social-sciences/cpcf/wp-content/uploads/sites/150/CPCF-Video-Carousel.jpg?x30279">
+    </div>
+    <div class="card cardstyle cardcolor">
+        <div class="card-body">
+            <div class="card-body cardcolor">
+                <a href="/playmoviestv" class="btn btn-primary" style="color:black"><h4>Movies/TV</h4></a>
+            </div>
+        </div>
+        <img class="card-img-bottom" src="https://lajoyalink.com/wp-content/uploads/2018/03/Movie.jpg">
+    </div>
+    <div class="card cardstyle cardcolor">
+        <div class="card-body">
+            <div class="card-body cardcolor">
+                <a href="/playother" class="btn btn-secondary" style="color:black"><h4>Other</h4></a>
+            </div>
+        </div>
+        <img class="card-img-bottom" src="https://miro.medium.com/max/2100/1*Km98PgzRp9yRYfVZeSzwzQ.png">
+    </div>
+
+{% endblock %}
+

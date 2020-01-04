@@ -1,0 +1,126 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+
+<style>
+  .demopic {
+    width: 900px;
+    height: 550px;
+  }
+</style>
+<br>
+<div class="container">
+  <img src="/static/logo.png" style="width: 275px; height: 200px">
+</div><br>
+<div id="demo" class="carousel-slide" data-ride="carousel" data-interval="false">
+  <!-- Indicators -->
+  <ul class="carousel-indicators" style="margin-bottom: -130px;">
+    <li data-target="#demo" data-slide-to="0" class="active"></li>
+    <li data-target="#demo" data-slide-to="1" class="active"></li>
+    <li data-target="#demo" data-slide-to="2" class="active"></li>
+    <li data-target="#demo" data-slide-to="3" class="active"></li>
+    <li data-target="#demo" data-slide-to="4" class="active"></li>
+    <li data-target="#demo" data-slide-to="5" class="active"></li>
+    <li data-target="#demo" data-slide-to="6" class="active"></li>
+  </ul>
+
+  <!-- The slideshow; surrounding each image in transparent divs (easier reading); not sure a better way to do this-->
+  <div class="carousel-inner">
+  <div class="carousel-bg center">
+    <div class="carousel-item active">
+      <div class="trans">
+        <img src="/static/randompic.jpg" class="demopic">
+      </div>
+      <div class="carousel-caption">
+        <h2 style="font-family: Courier New">Hello! Welcome to to my Trivia website - a final project for CS50!</h2>
+        <p style="font-family: Courier New">This website is designed for users who love playing trivia! Users can answer questions from various, or all, categories and add points to their scores.</p>
+        <br>
+        <p style="font-family: Courier New">In addition to answering questions and racking up points, users can also add their own trivia questions. This website depends upon the integrity of all users, as there is no "fact checker" when their questions and answers are submitted. (Though, I can remove questions deemed inaccurate, ambiguous, or inappropriate from the database.)</p>
+        <br>
+        <p style="font-family: Courier New">Scroll through to see all of the categories to choose from!</p>
+        <p><a href="https://unsplash.com/photos/C3T8KTZxTFM" target="_blank" style="font-family: Courier New; font-size: 12px">Photo by Erik Mclean on Unsplash</a></p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="trans">
+        <img src="/static/historypic.jpg" class="demopic">
+      </div>
+      <div class="carousel-caption">
+        <h1 style="font-family: Courier New">HISTORY</h1>
+        <br><br><br><br><br><br><br><br>
+        <p><a href="https://unsplash.com/photos/zeH-ljawHtg" target="_blank" style="font-family: Courier New; font-size: 12px">Photo by Giammarco Boscaro on Unsplash</a></p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="trans">
+        <img src="/static/moviestvpic.jpg" class="demopic">
+      </div>
+      <div class="carousel-caption">
+        <h1 style="font-family: Courier New">MOVIES/TV</h1>
+        <br><br><br><br><br><br><br><br>
+        <p><a href="https://unsplash.com/photos/23LET4Hxj_U" target="_blank" style="font-family: Courier New; font-size: 12px">Photo by Jake Hills on Unsplash</a></p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="trans">
+        <img src="/static/popculturepic.jpg" class="demopic">
+      </div>
+      <div class="carousel-caption">
+        <h1 style="font-family: Courier New">POP CULTURE</h1>
+        <br><br><br><br><br><br><br><br>
+        <p><a href="https://unsplash.com/photos/jwgGHZ-pf1U" target="_blank" style="font-family: Courier New; font-size: 12px">Photo by W K on Unsplash</a></p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="trans">
+        <img src="/static/sciencepic.jpg" class="demopic">
+      </div>
+      <div class="carousel-caption">
+        <h1 style="font-family: Courier New">SCIENCE</h1>
+        <br><br><br><br><br><br><br><br>
+        <p><a href="https://unsplash.com/photos/gKUC4TMhOiY" target="_blank" style="font-family: Courier New; font-size: 12px">Photo by Ousa Chea on Unsplash</a></p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="trans">
+        <img src="/static/sportspic.jpg" class="demopic">
+      </div>
+      <div class="carousel-caption">
+        <h1 style="font-family: Courier New">SPORTS</h1>
+        <br><br><br><br><br><br><br><br>
+        <p><a href="https://unsplash.com/photos/9HI8UJMSdZA" target="_blank" style="font-family: Courier New; font-size: 12px">Photo by Braden Collum on Unsplash</a></p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="trans">
+        <img src="/static/otherpic.jpg" class="demopic">
+      </div>
+      <div class="carousel-caption">
+        <h1 style="font-family: Courier New">OTHER</h1>
+        <br><br><br><br><br><br><br><br>
+        <p><a href="https://unsplash.com/photos/8xAA0f9yQnE" target="_blank" style="font-family: Courier New; font-size: 12px">Photo by Emily Morter on Unsplash</a></p>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <!-- Left and right controls -->
+  <a style="margin-top: 500px;" class="carousel-control-prev" href="#demo" data-slide="prev" onclick="$('#demo').carousel('prev')">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a style="margin-top: 500px;" class="carousel-control-next" href="#demo" data-slide="next" onclick="$('#demo').carousel('next')">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+</div>
+<br><br><br><br>
+
+
+{% endblock %}
+
+<!--
+Maybe provide info on current popular movies/tv shows.. articles about them? Idk lol
+-->

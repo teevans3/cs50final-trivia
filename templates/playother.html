@@ -1,0 +1,67 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Play! Other
+{% endblock %}
+{% block main %}
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script>
+    function result() {
+        if (document.getElementById("correct").checked) {
+            $(function() {
+                $.get("/addscore");
+            })
+            alert("Correct!");
+            // also find a way to increase user's score!
+        }
+        else {
+            alert("Wrong!");
+        }
+    }
+
+    $("body").on("submit", "form", function() {
+        $(this).submit(function() {
+            return false;
+        });
+        return true;
+    });
+</script>
+<style>
+    #bgpic {
+        background-image: url("/static/otherpic.jpg");
+        background-size: cover;
+        background-origin: content-box;
+    }
+</style>
+<br>
+<div class="container questionstyle">
+    <img src="/static/other.png" style="width: 240px; height: 200px">
+</div><br>
+<div id="bgpic">
+<div id="trans">
+<form action="/playother" method="get">
+    <div class="form-group questionbody" style="color:white;"><br>
+        <h1>{{ question }}</h1><br><br><br>
+        <div>
+            <input type="radio" name="answer" id="correct"> {{ correct }}
+        </div>
+        <div>
+            <input type="radio" name="answer" id="wrong1"> {{ wrong1 }}
+        </div>
+        <div>
+            <input type="radio" name="answer" id="wrong2"> {{ wrong2 }}
+        </div>
+        <div>
+            <input type="radio" name="answer" id="wrong3"> {{ wrong3 }}
+        </div>
+    </div><br>
+</form>
+<form action="/playother" method="post" onsubmit="result()">
+    <div class="form-group questionstyle">
+        <button class="btn btn-primary" type="submit">Answer</button>
+    </div>
+</form><br>
+</div>
+</div>
+<br><br><br>
+{% endblock %}

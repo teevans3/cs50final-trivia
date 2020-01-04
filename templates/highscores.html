@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Highscores
+{% endblock %}
+{% block main %}
+<br>
+<div class="container questionstyle navdisplay">
+    <img src="/static/highscores.png" style="width: 300px; height: 200px">
+</div><br>
+<div>
+    <table style="width:75%; margin-left:130px; background:rgba(0,0,0,0.25); border: 5px ridge #ffc107; box-shadow: 2px 2px 2px black;" class="table table-dark table-bordered table-hover">
+        <thead style="box-shadow: 2px 2px 2px black;">
+            <tr style="margin-right: 2px;">
+                <th class="thead-light">USERNAME</th>
+                <th class="thead-light">SCORE</th>
+            </tr>
+        </thead>
+        {% for score in scores %}
+        <tr class="table-sm">
+            <td style="color: white">
+                {{ score["username"] }}
+            </td>
+            <td style="color: white">
+                {{ score["score"] }}
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+<br><br><br><br>
+{% endblock %}

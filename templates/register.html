@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+{% block main %}
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script>
+
+$(function() {
+    document.getElementById("register").addEventListener("click", function(event){
+        event.preventDefault();
+        let username = document.querySelector("#username");
+        $.get("/check", {"username": username.value}, function(data) {
+            if (data == false) {
+                alert("Username already exists!");
+                console.log(data);
+                return 200;
+            }
+            else {
+                document.getElementById("form").submit();
+                console.log(data);
+                return true;
+            }
+        });
+    });
+});
+</script>
+<br>
+<div class="container">
+  <img src="/static/logo.png" style="width: 275px; height: 200px">
+</div><br>
+<h3 style="color: #ffc107; font-family: Courier New;">
+    Welcome to my CS50 project! Please <i>sign up</i> for an account to continue.
+</h3><br>
+    <form action="/register" method="post" id="form">
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="username" id="username" placeholder="Username" type="text">
+        </div>
+        <div class="form-group">
+            <input class="form-control" name="password" placeholder="Password" type="password">
+        </div>
+        <div class="form-group">
+            <input class="form-control" name="confirmation" placeholder="Confirm Password" type="password">
+        </div>
+        <button class="btn btn-primary" type="submit" id="register">Register</button>
+    </form>
+<br><br><br><br><br><br><br>
+{% endblock %}
